@@ -13,3 +13,5 @@ libraryDependencies ++= Seq(
 )
 
 routesGenerator := InjectedRoutesGenerator
+
+wartremoverErrors in (Compile, compile) ++= Warts.allBut(Wart.Equals, Wart.ToString)
